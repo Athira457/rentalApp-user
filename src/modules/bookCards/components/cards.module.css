@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+
+.vehicleContainer {
+    font-family: poppins;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .vehicleCard {
+    background-color: #dadada;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .vehicleCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .vehicleImage {
+    width: 250px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    object-fit: cover;
+  }
+  
+  .vehicleName {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .vehicleDescription {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
+  }
+  
+  .vehiclePrice, .vehicleQuantity {
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .rentButton {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .rentButton:hover {
+    background-color:  #555454;
+  }
+  
+  @media (max-width: 768px) {
+    .vehicleContainer {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .vehicleContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .vehicleCard {
+      padding: 12px;
+    }
+  
+    .vehicleImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
